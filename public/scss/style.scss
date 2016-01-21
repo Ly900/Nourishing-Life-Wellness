@@ -1,53 +1,115 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300);
 
-body, header, section, nav, ul, li, a, img, h1 {
+body, header, section, nav, ul, ol, div, li, a, img, h1 {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
 }
 
-/* --------------------------------------
+/* ------------------------------------------------------------
 MAIN STYLES
-----------------------------------------*/
+-------------------------------------------------------------*/
 $mainFontFamily: "Source Sans Pro", sans-serif;
 $mainFontColor: #000;
+$grayBorderColor: #F5F5F5;
 
-@mixin test-border($color) {
-  border: 3px solid $color;
+@mixin testBorder($color) {
+  // border: 2px solid $color;
 }
 
 body {
   font: {family: $mainFontFamily;
         size: 18px;
-        weight: 400;
+        weight: 300;
       }
   color: $mainFontColor;
   max-width: 100%;
   margin: 0 auto;
-  @include test-border(blue);
+  letter-spacing: .1em;
+  // @include testBorder(blue);
+}
+
+a#logo {
+  max-width: 400px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  @include testBorder(green);
+}
+
+/* ------------------------------------------------------------
+NAVIGATION
+-------------------------------------------------------------*/
+$regularLinkColor: black;
+$hoverLinkColor: gray;
+
+@mixin navBorder($color) {
+  border-bottom: 1px solid $color;
+  &:first-child {
+    border-top:1px solid $color;
+  }
 }
 
 nav {
+  width: 100%;
   ul {
     font-size: 1.5em;
     text-align: center;
-    @include test-border(red);
+    margin: .5em auto .5em;
+    // @include testBorder(red);
   }
   li {
     list-style-type: none;
-    border-bottom: 2px solid orange; 
+    font-variant: small-caps;
+    @include navBorder($grayBorderColor);
   }
+  a, a:hover, a:active, a:visited {
+    text-decoration: none;
+  }
+  a {
+    color: $regularLinkColor;
+    &:hover {
+      color: $hoverLinkColor;
+    }
+  }
+  @include testBorder(gray);
 }
 
+/* ------------------------------------------------------------
+IMAGES
+-------------------------------------------------------------*/
 img#logo {
-  max-width: 100%;
+  max-width: 75%;
+  @include testBorder(purple);
 }
 
-section#one {
-  // font-family: "PT Serif", serif;
+/* ------------------------------------------------------------
+SECTIONS
+-------------------------------------------------------------*/
+section.content {
+  border-bottom: 1px solid $grayBorderColor;
+  // @include testBorder(blue);
+  padding: 0 1em 2em;
 }
 
-section#two {
-  // font-family: $mainFontFamily;
+/* ------------------------------------------------------------
+HEADINGS
+-------------------------------------------------------------*/
+@mixin heading() {
+  font: {
+    size: 1.5em;
+    weight: 400;
+    variant: small-caps;
+  }
+  text-align: center;
+  margin: 1em auto;
 }
+
+h1 {
+  @include heading();
+}
+
+/* ------------------------------------------------------------
+CONTAINERS
+-------------------------------------------------------------*/

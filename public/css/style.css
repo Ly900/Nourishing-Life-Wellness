@@ -1,31 +1,75 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300);
-body, header, section, nav, ul, li, a, img, h1 {
+body, header, section, nav, ul, ol, div, li, a, img, h1 {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box; }
 
-/* --------------------------------------
+/* ------------------------------------------------------------
 MAIN STYLES
-----------------------------------------*/
+-------------------------------------------------------------*/
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   color: #000;
   max-width: 100%;
   margin: 0 auto;
-  border: 3px solid blue; }
+  letter-spacing: .1em; }
 
-nav ul {
-  font-size: 1.5em;
+a#logo {
+  max-width: 400px;
+  display: block;
   text-align: center;
-  border: 3px solid red; }
-nav li {
-  list-style-type: none;
-  border-bottom: 2px solid orange; }
+  margin: 0 auto; }
 
+/* ------------------------------------------------------------
+NAVIGATION
+-------------------------------------------------------------*/
+nav {
+  width: 100%; }
+  nav ul {
+    font-size: 1.5em;
+    text-align: center;
+    margin: .5em auto .5em; }
+  nav li {
+    list-style-type: none;
+    font-variant: small-caps;
+    border-bottom: 1px solid #F5F5F5; }
+    nav li:first-child {
+      border-top: 1px solid #F5F5F5; }
+  nav a, nav a:hover, nav a:active, nav a:visited {
+    text-decoration: none; }
+  nav a {
+    color: black; }
+    nav a:hover {
+      color: gray; }
+
+/* ------------------------------------------------------------
+IMAGES
+-------------------------------------------------------------*/
 img#logo {
-  max-width: 100%; }
+  max-width: 75%; }
+
+/* ------------------------------------------------------------
+SECTIONS
+-------------------------------------------------------------*/
+section.content {
+  border-bottom: 1px solid #F5F5F5;
+  padding: 0 1em 2em; }
+
+/* ------------------------------------------------------------
+HEADINGS
+-------------------------------------------------------------*/
+h1 {
+  font-size: 1.5em;
+  font-weight: 400;
+  font-variant: small-caps;
+  text-align: center;
+  margin: 1em auto; }
+
+/* ------------------------------------------------------------
+CONTAINERS
+-------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */
