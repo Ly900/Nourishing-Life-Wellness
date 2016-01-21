@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300);
+
+body, header, section, nav, ul, li, a, img, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------
+MAIN STYLES
+----------------------------------------*/
+$mainFontFamily: "Source Sans Pro", sans-serif;
+$mainFontColor: #000;
+
+@mixin test-border($color) {
+  border: 3px solid $color;
+}
+
+body {
+  font: {family: $mainFontFamily;
+        size: 18px;
+        weight: 400;
+      }
+  color: $mainFontColor;
+  max-width: 100%;
+  margin: 0 auto;
+  @include test-border(blue);
+}
+
+nav {
+  ul {
+    font-size: 1.5em;
+    text-align: center;
+    @include test-border(red);
+  }
+  li {
+    list-style-type: none;
+    border-bottom: 2px solid orange; 
+  }
+}
+
+img#logo {
+  max-width: 100%;
+}
+
+section#one {
+  // font-family: "PT Serif", serif;
+}
+
+section#two {
+  // font-family: $mainFontFamily;
+}

@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300);
+body, header, section, nav, ul, li, a, img, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+/* --------------------------------------
+MAIN STYLES
+----------------------------------------*/
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 3px solid blue; }
+
+nav ul {
+  font-size: 1.5em;
+  text-align: center;
+  border: 3px solid red; }
+nav li {
+  list-style-type: none;
+  border-bottom: 2px solid orange; }
+
+img#logo {
+  max-width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
