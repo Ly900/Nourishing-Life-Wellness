@@ -29,6 +29,12 @@ header {
 div.container-fluid {
   padding: 0; }
 
+div#myCarousel {
+  height: 300px; }
+
+div#myCarousel img {
+  width: 100%; }
+
 a#logo {
   max-width: 100%;
   text-align: center;
