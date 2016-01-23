@@ -43,6 +43,21 @@ div#myCarousel {
   div#myCarousel img {
     min-width: 100%;
     min-height: 300px; }
+  div#myCarousel div.item {
+    position: relative; }
+  div#myCarousel div.slideshow-caption {
+    position: absolute;
+    bottom: 0em;
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 0 0 black;
+    position: absolute;
+    background-color: black;
+    border-radius: 2px;
+    color: white;
+    opacity: 0.2; }
 
 /* ------------------------------------------------------------
 NAVIGATION

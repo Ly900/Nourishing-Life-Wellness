@@ -14,6 +14,7 @@ $mainFontFamily: "Source Sans Pro", sans-serif;
 $mainFontColor: #000;
 $sageColor: #B8C8A3;
 $lavenderColor: #C9B1DF;
+$lavenderColor2: #C9B0E0;
 $grayColor: #F5F5F5;
 $navBGcolor: darken($sageColor, 20%);
 
@@ -69,7 +70,29 @@ div#myCarousel {
     min-width: 100%;
     min-height: 300px;
   }
+  div.item {
+    position: relative;
+  }
+  div.slideshow-caption {
+    position: absolute;
+    bottom: 0em;
+    width: 100%;
+    height: 50px;
+    // padding-bottom: 1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 0 0 black;
+    position: absolute;
+    background-color: black;
+    border-radius: 2px;
+    color: white;
+    opacity: 0.2;
+  }
 }
+
+
+
+
 
 /* ------------------------------------------------------------
 NAVIGATION
