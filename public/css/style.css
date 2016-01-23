@@ -105,7 +105,8 @@ MEDIA QUERY FOR LARGER SCREENS
 
   body {
     max-width: 75%;
-    margin-top: 2em; }
+    margin-top: 2em;
+    font-size: 90%; }
 
   a#logo {
     max-width: 100%;
