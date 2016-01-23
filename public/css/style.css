@@ -156,7 +156,7 @@ MEDIA QUERY FOR LARGER SCREENS
     overflow: hidden; }
     div#myCarousel img {
       min-width: 100%;
-      min-height: 4o0px; } }
+      min-height: 400px; } }
 /* Ends media query */
 
 /*# sourceMappingURL=style.css.map */
