@@ -47,17 +47,21 @@ div#myCarousel {
     position: relative; }
   div#myCarousel div.slideshow-caption {
     position: absolute;
-    bottom: 0em;
-    width: 100%;
-    height: 50px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-shadow: 0 0 0 black;
-    position: absolute;
-    background-color: black;
-    border-radius: 2px;
-    color: white;
-    opacity: 0.2; }
+    padding: 1em;
+    text-align: center;
+    border-radius: 80%; }
+    div#myCarousel div.slideshow-caption span {
+      font-weight: 400;
+      font-size: .8em;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin: .2em;
+      float: left; }
+      div#myCarousel div.slideshow-caption span#stacked-stones {
+        color: white;
+        border-radius: 60%;
+        padding: 1em;
+        opacity: 0.8; }
 
 /* ------------------------------------------------------------
 NAVIGATION
