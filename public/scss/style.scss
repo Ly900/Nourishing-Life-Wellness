@@ -12,7 +12,10 @@ MAIN STYLES
 -------------------------------------------------------------*/
 $mainFontFamily: "Source Sans Pro", sans-serif;
 $mainFontColor: #000;
+$sageColor: #B8C8A3;
+$lavenderColor: #C9B1DF;
 $grayColor: #F5F5F5;
+$navBGcolor: darken($sageColor, 20%);
 
 @mixin testBorder($color) {
   // border: 2px solid $color;
@@ -32,6 +35,10 @@ body {
   margin: 0 auto;
   letter-spacing: .1em;
   // @include testBorder(blue);
+}
+
+header {
+  border-top: 10px solid lighten($navBGcolor, 5%);
 }
 
 div.container-fluid {
@@ -55,14 +62,13 @@ NAVIGATION
 -------------------------------------------------------------*/
 $navFontColor: #FFF;
 $hoverLinkColor: gray;
-$sageColor: #B8C8A3;
-$navBGcolor: darken($sageColor, 20%);
 
 @mixin navBorder($color) {
   border-bottom: 1px solid $color;
 }
 
 nav {
+  box-shadow: inset 0px 2px 5px white;
   width: 100%;
   ul {
     width: 100%;
@@ -96,7 +102,7 @@ nav {
     &:hover {
       background-color: lighten($navBGcolor, 5%);
       box-shadow: inset 0px 5px 10px lighten($navBGcolor, 20%);
-      text-shadow: 0px 4px 2px darken($navBGcolor, 80%);
+      text-shadow: 0px 3px 2px darken($navBGcolor, 80%);
     }
     &:active {
       background-color: darken($navBGcolor, 5%);
@@ -143,15 +149,10 @@ h1 {
 }
 
 /* ------------------------------------------------------------
-CONTAINERS
--------------------------------------------------------------*/
-
-
-/* ------------------------------------------------------------
 MEDIA QUERY FOR LARGER SCREENS
 -------------------------------------------------------------*/
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 650px) {
 
   html {
     background-color: lighten($sageColor, 10%);
@@ -189,6 +190,8 @@ MEDIA QUERY FOR LARGER SCREENS
     }
     a {
       box-shadow: 0px 0px 0px;
+      border: 1px solid white;
+      border-bottom: none;
     }
     a,
     a:hover,
