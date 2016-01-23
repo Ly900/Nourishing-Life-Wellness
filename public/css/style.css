@@ -9,7 +9,10 @@ body, header, section, nav, ul, ol, div, li, a, img, h1 {
 MAIN STYLES
 -------------------------------------------------------------*/
 html {
-  font-size: 18px; }
+  font-size: 18px;
+  background-color: #d1dbc3;
+  background-image: url("../images/sageBG.jpg");
+  background-attachment: fixed; }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -101,9 +104,6 @@ h1 {
 MEDIA QUERY FOR LARGER SCREENS
 -------------------------------------------------------------*/
 @media screen and (min-width: 650px) {
-  html {
-    background-color: #d1dbc3; }
-
   body {
     max-width: 75%;
     margin-top: 2em; }
