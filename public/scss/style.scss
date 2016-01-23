@@ -39,7 +39,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   letter-spacing: .1em;
-  // @include testBorder(blue);
+  @include testBorder(blue);
 }
 
 header {
@@ -50,16 +50,8 @@ div.container-fluid {
   padding: 0;
 }
 
-div#myCarousel {
-  height: 300px;
-}
-
-div#myCarousel img {
-  width: 100%;
-}
-
 a#logo {
-  max-width: 100%;
+  max-width: 75%;
   text-align: center;
   margin: 0 auto;
   display: block;
@@ -67,6 +59,15 @@ a#logo {
   img#logo {
     width: 400px;
     @include testBorder(green);
+  }
+}
+
+div#myCarousel {
+  height: 300px;
+  overflow: hidden;
+  img {
+    min-width: 100%;
+    min-height: 300px;
   }
 }
 
@@ -172,14 +173,18 @@ MEDIA QUERY FOR LARGER SCREENS
     margin-top: 2em;
   }
 
+  header {
+    text-align: left;
+  }
+
   a#logo {
     max-width: 100%;
     text-align: left;
-    margin: 0 auto;
-    display: block;
+    float: left;
+    margin-bottom: 1em;
     background-color: lighten($sageColor, 70%);
     img#logo {
-      width: 200px;
+      max-width: 200px;
       @include testBorder(green);
     }
     @include testBorder(purple);
@@ -215,13 +220,16 @@ MEDIA QUERY FOR LARGER SCREENS
         // border: 1px solid orange;
       }
     }
-
-
 } /* ends nav element */
 
-
-
-
+div#myCarousel {
+  height: 400px;
+  overflow: hidden;
+  img {
+    min-width: 100%;
+    min-height: 4o0px;
+  }
+}
 
 
 } /* Ends media query */

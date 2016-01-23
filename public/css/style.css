@@ -29,19 +29,20 @@ header {
 div.container-fluid {
   padding: 0; }
 
-div#myCarousel {
-  height: 300px; }
-
-div#myCarousel img {
-  width: 100%; }
-
 a#logo {
-  max-width: 100%;
+  max-width: 75%;
   text-align: center;
   margin: 0 auto;
   display: block; }
   a#logo img#logo {
     width: 400px; }
+
+div#myCarousel {
+  height: 300px;
+  overflow: hidden; }
+  div#myCarousel img {
+    min-width: 100%;
+    min-height: 300px; }
 
 /* ------------------------------------------------------------
 NAVIGATION
@@ -114,14 +115,17 @@ MEDIA QUERY FOR LARGER SCREENS
     max-width: 75%;
     margin-top: 2em; }
 
+  header {
+    text-align: left; }
+
   a#logo {
     max-width: 100%;
     text-align: left;
-    margin: 0 auto;
-    display: block;
+    float: left;
+    margin-bottom: 1em;
     background-color: white; }
     a#logo img#logo {
-      width: 200px; }
+      max-width: 200px; }
 
   nav ul {
     display: flex;
@@ -146,7 +150,13 @@ MEDIA QUERY FOR LARGER SCREENS
       width: 100%;
       align-self: center; }
 
-  /* ends nav element */ }
+  /* ends nav element */
+  div#myCarousel {
+    height: 400px;
+    overflow: hidden; }
+    div#myCarousel img {
+      min-width: 100%;
+      min-height: 4o0px; } }
 /* Ends media query */
 
 /*# sourceMappingURL=style.css.map */
