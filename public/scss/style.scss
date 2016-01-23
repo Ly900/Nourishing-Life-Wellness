@@ -12,7 +12,7 @@ MAIN STYLES
 -------------------------------------------------------------*/
 $mainFontFamily: "Source Sans Pro", sans-serif;
 $mainFontColor: #000;
-$grayBorderColor: #F5F5F5;
+$grayColor: #F5F5F5;
 
 @mixin testBorder($color) {
   // border: 2px solid $color;
@@ -31,46 +31,65 @@ body {
 }
 
 a#logo {
-  max-width: 400px;
-  display: block;
+  max-width: 100%;
   text-align: center;
   margin: 0 auto;
-  @include testBorder(green);
+  display: block;
+  @include testBorder(purple);
+  img#logo {
+    width: 400px;
+    @include testBorder(green);
+  }
 }
 
 /* ------------------------------------------------------------
 NAVIGATION
 -------------------------------------------------------------*/
-$regularLinkColor: black;
+$navFontColor: #FFF;
 $hoverLinkColor: gray;
+$sageColor: #B8C8A3;
+$navBGcolor: darken($sageColor, 20%);
 
 @mixin navBorder($color) {
   border-bottom: 1px solid $color;
-  &:first-child {
-    border-top:1px solid $color;
-  }
 }
 
 nav {
   width: 100%;
   ul {
+    width: 100%;
     font-size: 1.5em;
     text-align: center;
-    margin: .5em auto .5em;
-    // @include testBorder(red);
+    margin: .5em auto;
+    @include testBorder(red);
   }
   li {
+    width: 100%;
     list-style-type: none;
-    font-variant: small-caps;
-    @include navBorder($grayBorderColor);
+    @include testBorder(red);
   }
-  a, a:hover, a:active, a:visited {
+  a, a:hover, a:active, a:visited, a:focus {
     text-decoration: none;
+    width: 100%;
+    display: block;
+    color: $navFontColor;
+    text-shadow: 0px 2px 5px darken($navBGcolor, 40%);
+    background-color: $navBGcolor;
+    font-variant: small-caps;
   }
   a {
-    color: $regularLinkColor;
+    color: $navFontColor;
+    @include navBorder(darken($navBGcolor, 5%));
+    box-shadow: inset 0px 3px 5px lighten($navBGcolor, 10%);
     &:hover {
-      color: $hoverLinkColor;
+      background-color: lighten($navBGcolor, 5%);
+      box-shadow: inset 0px 5px 10px lighten($navBGcolor, 20%);
+      text-shadow: 0px 4px 2px darken($navBGcolor, 80%);
+    }
+    &:active {
+      background-color: darken($navBGcolor, 5%);
+      border-top: 1px solid darken($navBGcolor, 20%);
+      box-shadow: inset 0px 2px 10px darken($navBGcolor, 50%);
     }
   }
   @include testBorder(gray);
@@ -88,7 +107,7 @@ img#logo {
 SECTIONS
 -------------------------------------------------------------*/
 section.content {
-  border-bottom: 1px solid $grayBorderColor;
+  border-bottom: 1px solid $grayColor;
   // @include testBorder(blue);
   padding: 0 1em 2em;
 }
@@ -113,3 +132,66 @@ h1 {
 /* ------------------------------------------------------------
 CONTAINERS
 -------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------
+MEDIA QUERY FOR SCREENS LARGER > 700px
+-------------------------------------------------------------*/
+
+@media screen and (min-width: 701px) {
+
+  html {
+    background-color: lighten($sageColor, 10%);
+  }
+
+  body {
+    max-width: 75%;
+    margin-top: 2em;
+  }
+
+  a#logo {
+    max-width: 100%;
+    text-align: left;
+    margin: 0 auto;
+    display: block;
+    background-color: lighten($sageColor, 70%);
+    img#logo {
+      width: 200px;
+      @include testBorder(green);
+    }
+    @include testBorder(purple);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    display: flex;
+    align-content: center;
+  }
+
+  nav a {
+    box-shadow: 0px 0px 0px;
+  }
+
+  nav a,
+  nav a:hover,
+  nav a:focus {
+    align-self: stretch;
+    display: flex;
+    // border: 1px red solid;
+  }
+
+  nav a span {
+    width: 100%;
+    align-self: center;
+  }
+
+
+
+
+
+
+}
