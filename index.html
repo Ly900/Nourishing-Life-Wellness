@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="practice">
 <head>
   <meta charset="UTF-8">
   <title>Nourishing Life Wellness</title>
@@ -10,12 +10,18 @@
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+  <!-- ANGULAR CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+  <!-- MY ANGULAR SCRIPT -->
+  <script src="app.js"></script>
+
   <!-- MY CSS -->
   <link rel="stylesheet" href="public/css/style.css" media="screen" title="no title" charset="utf-8">
 
   <script src="script.js"></script>
 </head>
-<body>
+<body data-ng-controller="practiceCtrl as practice">
 
   <header>
 
@@ -47,6 +53,7 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
       </ol>
 
       <!-- Wrapper for slides -->
@@ -65,13 +72,18 @@
         </div>
 
         <div class="item">
-          <div class="slideshow-caption"><span>Relax and stuff</span></div>
-          <img src="public/images/relaxed-woman.jpg" alt="Relaxed Woman">
+          <div class="slideshow-caption"></div>
+          <img src="public/images/relaxed-woman-text2.jpg" alt="Relaxed Woman">
         </div>
 
         <div class="item">
-          <div class="slideshow-caption"><span>Sleep something</span></div>
-          <img src="public/images/weeds-mountains.jpg" alt="Weeds and Mountains">
+          <div class="slideshow-caption"></div>
+          <img src="public/images/weeds-mountains-text.jpg" alt="Weeds and Mountains">
+        </div>
+
+        <div class="item">
+          <div class="slideshow-caption"></div>
+          <img src="public/images/hands-text.jpg" alt="Hands">
         </div>
 
       </div>
