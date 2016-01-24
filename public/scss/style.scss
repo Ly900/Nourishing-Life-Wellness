@@ -142,11 +142,23 @@ img#logo {
   @include testBorder(purple);
 }
 
+img.hr-small-disappears {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+img.hr-small-appears {
+  max-width: 30%;
+  margin: 0 auto;
+  display: none;
+}
+
+
 /* ------------------------------------------------------------
 SECTIONS
 -------------------------------------------------------------*/
 section.content {
-  border-bottom: 1px solid $grayColor;
+  // border-bottom: 5px solid blue;
   padding: 0 2em 2em;
   // @include testBorder(blue);
 }
@@ -175,22 +187,6 @@ CONTAINERS
 div.two-columns {
   display: flex;
   flex-direction: column;
-}
-
-/* ------------------------------------------------------------
-MEDIA QUERY FOR MEDIUM SCREENS > 550px
--------------------------------------------------------------*/
-
-@media screen and (min-width: 1000px) {
-
-  /* ------------------------------------------------------------
-  CONTAINERS
-  -------------------------------------------------------------*/
-
-  div.two-columns {
-    flex-direction: row;
-  }
-
 }
 
 /* ------------------------------------------------------------
@@ -251,16 +247,41 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
         // border: 1px solid orange;
       }
     }
-} /* ends nav element */
+  } /* ends nav element */
 
-div#myCarousel {
-  height: 400px;
-  overflow: hidden;
-  img {
-    min-width: 100%;
-    min-height: 400px;
+  div#myCarousel {
+    height: 400px;
+    overflow: hidden;
+    img {
+      min-width: 100%;
+      min-height: 400px;
+    }
   }
-}
+
+} /* Ends large media query */
 
 
-} /* Ends media query */
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGER SCREENS > 1000px
+-------------------------------------------------------------*/
+
+@media screen and (min-width: 1000px) {
+
+  /* ------------------------------------------------------------
+  CONTAINERS
+  -------------------------------------------------------------*/
+
+  div.two-columns {
+    flex-direction: row;
+  }
+
+  img.hr-small-disappears {
+    display: none;
+  }
+
+  img.hr-small-appears {
+    display: block;
+    width: 30%;
+  }
+
+} /* Ends media query for larger screens */

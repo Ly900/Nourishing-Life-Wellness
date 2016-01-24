@@ -93,11 +93,19 @@ IMAGES
 img#logo {
   max-width: 75%; }
 
+img.hr-small-disappears {
+  max-width: 90%;
+  margin: 0 auto; }
+
+img.hr-small-appears {
+  max-width: 30%;
+  margin: 0 auto;
+  display: none; }
+
 /* ------------------------------------------------------------
 SECTIONS
 -------------------------------------------------------------*/
 section.content {
-  border-bottom: 1px solid #F5F5F5;
   padding: 0 2em 2em; }
 
 /* ------------------------------------------------------------
@@ -117,15 +125,6 @@ div.two-columns {
   display: flex;
   flex-direction: column; }
 
-/* ------------------------------------------------------------
-MEDIA QUERY FOR MEDIUM SCREENS > 550px
--------------------------------------------------------------*/
-@media screen and (min-width: 1000px) {
-  /* ------------------------------------------------------------
-  CONTAINERS
-  -------------------------------------------------------------*/
-  div.two-columns {
-    flex-direction: row; } }
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px
 -------------------------------------------------------------*/
@@ -176,6 +175,23 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
     div#myCarousel img {
       min-width: 100%;
       min-height: 400px; } }
-/* Ends media query */
+/* Ends large media query */
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGER SCREENS > 1000px
+-------------------------------------------------------------*/
+@media screen and (min-width: 1000px) {
+  /* ------------------------------------------------------------
+  CONTAINERS
+  -------------------------------------------------------------*/
+  div.two-columns {
+    flex-direction: row; }
+
+  img.hr-small-disappears {
+    display: none; }
+
+  img.hr-small-appears {
+    display: block;
+    width: 30%; } }
+/* Ends media query for larger screens */
 
 /*# sourceMappingURL=style.css.map */
