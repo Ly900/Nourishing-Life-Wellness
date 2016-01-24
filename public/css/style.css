@@ -39,29 +39,13 @@ a#logo {
 
 div#myCarousel {
   height: 300px;
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 0.9; }
+  div#myCarousel:hover {
+    opacity: 1; }
   div#myCarousel img {
     min-width: 100%;
     min-height: 300px; }
-  div#myCarousel div.item {
-    position: relative; }
-  div#myCarousel div.slideshow-caption {
-    position: absolute;
-    padding: 1em;
-    text-align: center;
-    border-radius: 80%; }
-    div#myCarousel div.slideshow-caption span {
-      font-weight: 400;
-      font-size: .8em;
-      letter-spacing: 1px;
-      cursor: pointer;
-      margin: .2em;
-      float: left; }
-      div#myCarousel div.slideshow-caption span#stacked-stones {
-        color: white;
-        border-radius: 60%;
-        padding: 1em;
-        opacity: 0.8; }
 
 /* ------------------------------------------------------------
 NAVIGATION
@@ -114,7 +98,7 @@ SECTIONS
 -------------------------------------------------------------*/
 section.content {
   border-bottom: 1px solid #F5F5F5;
-  padding: 0 1em 2em; }
+  padding: 0 2em 2em; }
 
 /* ------------------------------------------------------------
 HEADINGS
@@ -127,7 +111,23 @@ h1 {
   margin: 1em auto; }
 
 /* ------------------------------------------------------------
-MEDIA QUERY FOR LARGER SCREENS
+CONTAINERS
+-------------------------------------------------------------*/
+div.two-columns {
+  display: flex;
+  flex-direction: column; }
+
+/* ------------------------------------------------------------
+MEDIA QUERY FOR MEDIUM SCREENS > 550px
+-------------------------------------------------------------*/
+@media screen and (min-width: 1000px) {
+  /* ------------------------------------------------------------
+  CONTAINERS
+  -------------------------------------------------------------*/
+  div.two-columns {
+    flex-direction: row; } }
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGE SCREENS > 550px
 -------------------------------------------------------------*/
 @media screen and (min-width: 550px) {
   body {

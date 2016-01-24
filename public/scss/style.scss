@@ -66,44 +66,15 @@ a#logo {
 div#myCarousel {
   height: 300px;
   overflow: hidden;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
   img {
     min-width: 100%;
     min-height: 300px;
   }
-  div.item {
-    position: relative;
-  }
-  div.slideshow-caption {
-    position: absolute;
-    // border: 2px solid blue;
-    padding: 1em;
-    text-align: center;
-    border-radius: 80%;
-    span {
-      font-weight: 400;
-      font-size: .8em;
-      letter-spacing: 1px;
-      cursor: pointer;
-      margin: .2em;
-      float: left;
-      // background-color: black;
-      // border: 2px solid red;
-      &#stacked-stones {
-        color: white;
-        border-radius: 60%;
-        padding: 1em;
-        opacity: 0.8;
-        // text-shadow: 0px 0px 1px black;
-      }
-    }
-    &#stacked-stones {
-
-    }
-  }
 }
-
-
-
 
 
 /* ------------------------------------------------------------
@@ -176,8 +147,8 @@ SECTIONS
 -------------------------------------------------------------*/
 section.content {
   border-bottom: 1px solid $grayColor;
+  padding: 0 2em 2em;
   // @include testBorder(blue);
-  padding: 0 1em 2em;
 }
 
 /* ------------------------------------------------------------
@@ -198,7 +169,32 @@ h1 {
 }
 
 /* ------------------------------------------------------------
-MEDIA QUERY FOR LARGER SCREENS
+CONTAINERS
+-------------------------------------------------------------*/
+
+div.two-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------------------------
+MEDIA QUERY FOR MEDIUM SCREENS > 550px
+-------------------------------------------------------------*/
+
+@media screen and (min-width: 1000px) {
+
+  /* ------------------------------------------------------------
+  CONTAINERS
+  -------------------------------------------------------------*/
+
+  div.two-columns {
+    flex-direction: row;
+  }
+
+}
+
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGE SCREENS > 550px
 -------------------------------------------------------------*/
 
 @media screen and (min-width: 550px) {
