@@ -142,9 +142,15 @@ img#logo {
   @include testBorder(purple);
 }
 
+img.hr {
+  padding: 2em 0em;
+}
+
 img.hr-small-disappears {
+  padding: 0 2em;
   max-width: 90%;
   margin: 0 auto;
+  // background-color: lighten($lavenderColor, 10%);
 }
 
 img.hr-small-appears {
@@ -160,7 +166,33 @@ SECTIONS
 section.content {
   // border-bottom: 5px solid blue;
   padding: 0 2em 2em;
+  width: 100%;
   // @include testBorder(blue);
+}
+
+section.vision {
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+
+section.vision:hover {
+  background-color: lighten($lavenderColor, 10%);
+  color: darken($lavenderColor, 50%);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+section.mission {
+  transition: 1s;
+  -webkit-transition: 1s;
+  color: black;
+}
+
+section.mission:hover {
+  background-color: lighten($sageColor, 10%);
+  color: darken($sageColor, 50%);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 /* ------------------------------------------------------------
@@ -169,7 +201,7 @@ HEADINGS
 @mixin heading() {
   font: {
     size: 1.5em;
-    weight: 400;
+    weight: 600;
     variant: small-caps;
   }
   text-align: center;
@@ -178,7 +210,14 @@ HEADINGS
 
 h1 {
   @include heading();
+  &#vision {
+    color: darken($lavenderColor, 30%);
+  }
+  &#mission {
+    color: darken($sageColor, 30%);
+  }
 }
+
 
 /* ------------------------------------------------------------
 CONTAINERS
@@ -187,6 +226,16 @@ CONTAINERS
 div.two-columns {
   display: flex;
   flex-direction: column;
+}
+
+div.container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.first {
+  background-color: lighten($lavenderColor, 10%);
 }
 
 /* ------------------------------------------------------------
@@ -252,6 +301,7 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
   div#myCarousel {
     height: 400px;
     overflow: hidden;
+    border-bottom: 20px solid $navBGcolor;
     img {
       min-width: 100%;
       min-height: 400px;

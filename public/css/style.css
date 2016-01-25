@@ -93,7 +93,11 @@ IMAGES
 img#logo {
   max-width: 75%; }
 
+img.hr {
+  padding: 2em 0em; }
+
 img.hr-small-disappears {
+  padding: 0 2em;
   max-width: 90%;
   margin: 0 auto; }
 
@@ -106,17 +110,43 @@ img.hr-small-appears {
 SECTIONS
 -------------------------------------------------------------*/
 section.content {
-  padding: 0 2em 2em; }
+  padding: 0 2em 2em;
+  width: 100%; }
+
+section.vision {
+  transition: 1s;
+  -webkit-transition: 1s; }
+
+section.vision:hover {
+  background-color: #e2d5ee;
+  color: #4a2a67;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1); }
+
+section.mission {
+  transition: 1s;
+  -webkit-transition: 1s;
+  color: black; }
+
+section.mission:hover {
+  background-color: #d1dbc3;
+  color: #384428;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1); }
 
 /* ------------------------------------------------------------
 HEADINGS
 -------------------------------------------------------------*/
 h1 {
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 600;
   font-variant: small-caps;
   text-align: center;
   margin: 1em auto; }
+  h1#vision {
+    color: #7e48af; }
+  h1#mission {
+    color: #6d834f; }
 
 /* ------------------------------------------------------------
 CONTAINERS
@@ -124,6 +154,14 @@ CONTAINERS
 div.two-columns {
   display: flex;
   flex-direction: column; }
+
+div.container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
+div.first {
+  background-color: #e2d5ee; }
 
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px
@@ -171,7 +209,8 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
   /* ends nav element */
   div#myCarousel {
     height: 400px;
-    overflow: hidden; }
+    overflow: hidden;
+    border-bottom: 20px solid #87a263; }
     div#myCarousel img {
       min-width: 100%;
       min-height: 400px; } }
