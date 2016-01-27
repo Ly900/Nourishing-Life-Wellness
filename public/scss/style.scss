@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300);
 
-body, header, section, nav, ul, ol, div, li, a, img, h1 {
+body, header, footer, section, div, span, nav, ul, ol, div, li, a, img, h1 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -41,6 +41,7 @@ body {
   margin: 0 auto;
   letter-spacing: .1em;
   @include testBorder(blue);
+  margin-bottom: 3em;
 }
 
 header {
@@ -267,6 +268,25 @@ blockquote.testimonial {
     font-weight: 800;
   }
 }
+
+/* ------------------------------------------------------------
+CONTACT
+-------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------*/
+footer {
+  color: white;
+  font-size: .8em;
+  width: 100%;
+  padding: .5em;
+  background-color: lighten($navBGcolor, 5%);
+  text-shadow: 0px 2px 5px darken($navBGcolor, 40%);
+  margin-top: 3em;
+}
+
 
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px

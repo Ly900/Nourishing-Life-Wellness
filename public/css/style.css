@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300);
-body, header, section, nav, ul, ol, div, li, a, img, h1 {
+body, header, footer, section, div, span, nav, ul, ol, div, li, a, img, h1 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,7 +21,8 @@ body {
   color: #000;
   max-width: 100%;
   margin: 0 auto;
-  letter-spacing: .1em; }
+  letter-spacing: .1em;
+  margin-bottom: 3em; }
 
 header {
   border-top: 10px solid #93ab73; }
@@ -188,6 +189,21 @@ blockquote.testimonial {
   blockquote.testimonial span.cite {
     color: #6d834f;
     font-weight: 800; }
+
+/* ------------------------------------------------------------
+CONTACT
+-------------------------------------------------------------*/
+/* ------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------*/
+footer {
+  color: white;
+  font-size: .8em;
+  width: 100%;
+  padding: .5em;
+  background-color: #93ab73;
+  text-shadow: 0px 2px 5px #1d2415;
+  margin-top: 3em; }
 
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px
