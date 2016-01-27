@@ -21,8 +21,7 @@ body {
   color: #000;
   max-width: 100%;
   margin: 0 auto;
-  letter-spacing: .1em;
-  margin-bottom: 3em; }
+  letter-spacing: .1em; }
 
 header {
   border-top: 10px solid #93ab73; }
@@ -51,6 +50,16 @@ div#myCarousel {
 /* ------------------------------------------------------------
 NAVIGATION
 -------------------------------------------------------------*/
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none; }
+
+a:hover {
+  font-weight: bolder; }
+
 nav {
   box-shadow: inset 0px 2px 5px white;
   width: 100%; }
@@ -67,14 +76,12 @@ nav {
   nav a:active,
   nav a:visited,
   nav a:focus {
-    text-decoration: none;
     width: 100%;
     display: block;
     color: #FFF;
     background-color: #87a263;
     font-variant: small-caps; }
   nav a {
-    color: #FFF;
     border-bottom: 1px solid #7a9358;
     box-shadow: inset 0px 3px 5px #9fb583;
     text-shadow: 0px 2px 5px #1d2415; }
@@ -135,6 +142,17 @@ section.mission:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1); }
 
+section.contact div {
+  font-size: 1.2em;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2;
+  background-color: #f6f8f3;
+  border-radius: 5px; }
+  section.contact div:hover {
+    background-color: #e9eee3; }
+
 /* ------------------------------------------------------------
 HEADINGS
 -------------------------------------------------------------*/
@@ -188,11 +206,8 @@ blockquote.testimonial {
     bottom: -.4em; }
   blockquote.testimonial span.cite {
     color: #6d834f;
-    font-weight: 800; }
+    font-weight: 600; }
 
-/* ------------------------------------------------------------
-CONTACT
--------------------------------------------------------------*/
 /* ------------------------------------------------------------
 FOOTER
 -------------------------------------------------------------*/
@@ -206,12 +221,13 @@ footer {
   margin-top: 3em; }
 
 /* ------------------------------------------------------------
-MEDIA QUERY FOR LARGE SCREENS > 550px
+MEDIA QUERY FOR MEDIUM SCREENS > 550px
 -------------------------------------------------------------*/
 @media screen and (min-width: 550px) {
   body {
     max-width: 75%;
-    margin-top: 2em; }
+    margin-top: 2em;
+    margin-bottom: 2em; }
 
   header {
     text-align: left; }
@@ -257,6 +273,13 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
       min-width: 100%;
       min-height: 400px; }
 
+  section.contact div {
+    max-width: 75%; } }
+/* Ends medium media query */
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGE SCREENS > 768px
+-------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
   blockquote.testimonial {
     border: none;
     padding: 1em;
@@ -266,10 +289,7 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
     blockquote.testimonial:before {
       content: ""; }
     blockquote.testimonial:after {
-      content: ""; }
-    blockquote.testimonial:hover {
-      opacity: 1; } }
-/* Ends large media query */
+      content: ""; } }
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGER SCREENS > 1000px
 -------------------------------------------------------------*/

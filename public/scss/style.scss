@@ -41,7 +41,6 @@ body {
   margin: 0 auto;
   letter-spacing: .1em;
   @include testBorder(blue);
-  margin-bottom: 3em;
 }
 
 header {
@@ -88,6 +87,18 @@ $hoverLinkColor: gray;
   border-bottom: 1px solid $color;
 }
 
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bolder;
+}
+
 nav {
   box-shadow: inset 0px 2px 5px white;
   width: 100%;
@@ -108,7 +119,6 @@ nav {
   a:active,
   a:visited,
   a:focus {
-    text-decoration: none;
     width: 100%;
     display: block;
     color: $navFontColor;
@@ -116,7 +126,6 @@ nav {
     font-variant: small-caps;
   }
   a {
-    color: $navFontColor;
     @include navBorder(darken($navBGcolor, 5%));
     box-shadow: inset 0px 3px 5px lighten($navBGcolor, 10%);
         text-shadow: 0px 2px 5px darken($navBGcolor, 40%);
@@ -195,6 +204,23 @@ section.mission:hover {
   -webkit-transform: scale(1.1);
 }
 
+section.contact {
+  // border: 1px solid red;
+  div {
+    // border: 2px solid blue;
+    font-size: 1.2em;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+    background-color: lighten($sageColor, 25%);
+    border-radius: 5px;
+    &:hover {
+      background-color: lighten($sageColor, 20%);
+    }
+  }
+}
+
 /* ------------------------------------------------------------
 HEADINGS
 -------------------------------------------------------------*/
@@ -265,13 +291,9 @@ blockquote.testimonial {
   }
   span.cite {
     color: darken($sageColor, 30%);
-    font-weight: 800;
+    font-weight: 600;
   }
 }
-
-/* ------------------------------------------------------------
-CONTACT
--------------------------------------------------------------*/
 
 
 /* ------------------------------------------------------------
@@ -287,9 +309,8 @@ footer {
   margin-top: 3em;
 }
 
-
 /* ------------------------------------------------------------
-MEDIA QUERY FOR LARGE SCREENS > 550px
+MEDIA QUERY FOR MEDIUM SCREENS > 550px
 -------------------------------------------------------------*/
 
 @media screen and (min-width: 550px) {
@@ -297,6 +318,7 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
   body {
     max-width: 75%;
     margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   header {
@@ -358,26 +380,33 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
     }
   }
 
-  blockquote.testimonial {
-    border: none;
-    padding: 1em;
-    text-align: center;
-    font-style: italic;
-    opacity: .8;
-    &:before {
-      content: "";
-    }
-    &:after {
-      content: "";
-    }
-    &:hover {
-      opacity: 1;
-    }
+  section.contact div {
+    max-width: 75%;
   }
 
+} /* Ends medium media query */
 
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGE SCREENS > 768px
+-------------------------------------------------------------*/
 
-} /* Ends large media query */
+@media screen and (min-width: 768px) {
+
+    blockquote.testimonial {
+      border: none;
+      padding: 1em;
+      text-align: center;
+      font-style: italic;
+      opacity: .8;
+      &:before {
+        content: "";
+      }
+      &:after {
+        content: "";
+      }
+    }
+
+}
 
 
 /* ------------------------------------------------------------
