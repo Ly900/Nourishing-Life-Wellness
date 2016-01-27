@@ -102,8 +102,7 @@ img.hr-small-disappears {
   max-width: 90%;
   margin: 0 auto; }
 
-img.hr-small-appears {
-  max-width: 30%;
+img.hr-long {
   margin: 0 auto;
   display: none; }
 
@@ -111,7 +110,7 @@ img.hr-small-appears {
 SECTIONS
 -------------------------------------------------------------*/
 section.content {
-  padding: 0 2em 2em;
+  padding: 0 2em 1em;
   width: 100%; }
 
 section.vision {
@@ -168,13 +167,13 @@ div.first {
 TESTIMONIALS
 -------------------------------------------------------------*/
 blockquote.testimonial {
-  background-color: #fff;
   position: relative;
   border: none;
-  padding: 2em; }
+  padding: 1em;
+  text-align: center; }
   blockquote.testimonial:before, blockquote.testimonial:after {
     color: #7e48af;
-    font-size: 5em;
+    font-size: 4em;
     position: absolute; }
   blockquote.testimonial:before {
     content: "\201C";
@@ -183,7 +182,7 @@ blockquote.testimonial {
   blockquote.testimonial:after {
     content: "\201D";
     right: 0;
-    bottom: 0; }
+    bottom: -.4em; }
   blockquote.testimonial span.cite {
     color: #6d834f;
     font-weight: 800; }
@@ -253,9 +252,12 @@ MEDIA QUERY FOR LARGER SCREENS > 1000px
   img.hr-small-disappears {
     display: none; }
 
-  img.hr-small-appears {
+  img.hr-long {
     display: block;
-    width: 30%; } }
+    width: 60%; }
+
+  img.hr {
+    padding-top: 1em; } }
 /* Ends media query for larger screens */
 
 /*# sourceMappingURL=style.css.map */

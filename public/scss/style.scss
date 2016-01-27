@@ -151,11 +151,9 @@ img.hr-small-disappears {
   padding: 0 2em;
   max-width: 90%;
   margin: 0 auto;
-  // background-color: lighten($lavenderColor, 10%);
 }
 
-img.hr-small-appears {
-  max-width: 30%;
+img.hr-long {
   margin: 0 auto;
   display: none;
 }
@@ -166,7 +164,7 @@ SECTIONS
 -------------------------------------------------------------*/
 section.content {
   // border-bottom: 5px solid blue;
-  padding: 0 2em 2em;
+  padding: 0 2em 1em;
   width: 100%;
   // @include testBorder(blue);
 }
@@ -243,13 +241,13 @@ div.first {
 TESTIMONIALS
 -------------------------------------------------------------*/
 blockquote.testimonial {
-  background-color: #fff;
   position: relative;
   border: none;
-  padding: 2em;
+  padding: 1em;
+  text-align: center;
   &:before, &:after {
     color: darken($lavenderColor, 30%);
-    font-size: 5em;
+    font-size: 4em;
     position: absolute;
   }
   &:before {
@@ -260,7 +258,7 @@ blockquote.testimonial {
   &:after {
     content: "\201D";
     right: 0;
-    bottom: 0;
+    bottom: -.4em;
   }
   span.cite {
     color: darken($sageColor, 30%);
@@ -359,9 +357,13 @@ MEDIA QUERY FOR LARGER SCREENS > 1000px
     display: none;
   }
 
-  img.hr-small-appears {
+  img.hr-long {
     display: block;
-    width: 30%;
+    width: 60%;
+  }
+
+  img.hr {
+    padding-top: 1em;
   }
 
 } /* Ends media query for larger screens */
