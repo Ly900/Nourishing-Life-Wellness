@@ -143,9 +143,9 @@ h1 {
   font-variant: small-caps;
   text-align: center;
   margin: 1em auto; }
-  h1#vision {
+  h1#vision, h1#testimonials {
     color: #7e48af; }
-  h1#mission {
+  h1#mission, h1#contact {
     color: #6d834f; }
 
 /* ------------------------------------------------------------
@@ -183,15 +183,11 @@ blockquote.testimonial {
     left: -.2em; }
   blockquote.testimonial:after {
     content: "\201D";
-    right: 0;
+    right: .2em;
     bottom: -.4em; }
   blockquote.testimonial span.cite {
     color: #6d834f;
     font-weight: 800; }
-  blockquote.testimonial:hover {
-    opacity: 1; }
-  blockquote.testimonial:hover {
-    font-weight: bolder; }
 
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px
@@ -243,7 +239,20 @@ MEDIA QUERY FOR LARGE SCREENS > 550px
     border-bottom: 20px solid #87a263; }
     div#myCarousel img {
       min-width: 100%;
-      min-height: 400px; } }
+      min-height: 400px; }
+
+  blockquote.testimonial {
+    border: none;
+    padding: 1em;
+    text-align: center;
+    font-style: italic;
+    opacity: .8; }
+    blockquote.testimonial:before {
+      content: ""; }
+    blockquote.testimonial:after {
+      content: ""; }
+    blockquote.testimonial:hover {
+      opacity: 1; } }
 /* Ends large media query */
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGER SCREENS > 1000px
