@@ -167,10 +167,12 @@ div.first {
 TESTIMONIALS
 -------------------------------------------------------------*/
 blockquote.testimonial {
+  color: gray;
   position: relative;
   border: none;
   padding: 1em;
-  text-align: center; }
+  text-align: center;
+  font-style: italic; }
   blockquote.testimonial:before, blockquote.testimonial:after {
     color: #7e48af;
     font-size: 4em;
@@ -186,6 +188,10 @@ blockquote.testimonial {
   blockquote.testimonial span.cite {
     color: #6d834f;
     font-weight: 800; }
+  blockquote.testimonial:hover {
+    opacity: 1; }
+  blockquote.testimonial:hover {
+    font-weight: bolder; }
 
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px

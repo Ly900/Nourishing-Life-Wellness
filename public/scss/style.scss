@@ -241,10 +241,12 @@ div.first {
 TESTIMONIALS
 -------------------------------------------------------------*/
 blockquote.testimonial {
+  color: gray;
   position: relative;
   border: none;
   padding: 1em;
   text-align: center;
+  font-style: italic;
   &:before, &:after {
     color: darken($lavenderColor, 30%);
     font-size: 4em;
@@ -263,6 +265,12 @@ blockquote.testimonial {
   span.cite {
     color: darken($sageColor, 30%);
     font-weight: 800;
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &:hover {
+    font-weight: bolder;
   }
 }
 
