@@ -240,6 +240,35 @@ div.first {
 }
 
 /* ------------------------------------------------------------
+TESTIMONIALS
+-------------------------------------------------------------*/
+blockquote.testimonial {
+  background-color: #fff;
+  position: relative;
+  border: none;
+  padding: 2em;
+  &:before, &:after {
+    color: darken($lavenderColor, 30%);
+    font-size: 5em;
+    position: absolute;
+  }
+  &:before {
+    content: "\201C";
+    top: -.3em;
+    left: -.2em;
+  }
+  &:after {
+    content: "\201D";
+    right: 0;
+    bottom: 0;
+  }
+  span.cite {
+    color: darken($sageColor, 30%);
+    font-weight: 800;
+  }
+}
+
+/* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px
 -------------------------------------------------------------*/
 

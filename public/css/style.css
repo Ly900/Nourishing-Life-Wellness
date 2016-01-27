@@ -165,6 +165,30 @@ div.first {
   background-color: #e2d5ee; }
 
 /* ------------------------------------------------------------
+TESTIMONIALS
+-------------------------------------------------------------*/
+blockquote.testimonial {
+  background-color: #fff;
+  position: relative;
+  border: none;
+  padding: 2em; }
+  blockquote.testimonial:before, blockquote.testimonial:after {
+    color: #7e48af;
+    font-size: 5em;
+    position: absolute; }
+  blockquote.testimonial:before {
+    content: "\201C";
+    top: -.3em;
+    left: -.2em; }
+  blockquote.testimonial:after {
+    content: "\201D";
+    right: 0;
+    bottom: 0; }
+  blockquote.testimonial span.cite {
+    color: #6d834f;
+    font-weight: 800; }
+
+/* ------------------------------------------------------------
 MEDIA QUERY FOR LARGE SCREENS > 550px
 -------------------------------------------------------------*/
 @media screen and (min-width: 550px) {
