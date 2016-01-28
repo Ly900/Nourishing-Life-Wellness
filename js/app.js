@@ -23,6 +23,12 @@
       templateUrl: "shared/logo/logo.html"
     }
   })
+  .directive("visionMission", function() {
+    return {
+      restrict: "E",
+      templateUrl: "shared/vision_mission/visionMission.html"
+    }
+  });
 
 
 
