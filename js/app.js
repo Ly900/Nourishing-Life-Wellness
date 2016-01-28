@@ -16,7 +16,13 @@
       restrict: "E",
       templateUrl: "shared/navigation/navBar.html"
     }
-  });
+  })
+  .directive("logo", function() {
+    return {
+      restrict: "E",
+      templateUrl: "shared/logo/logo.html"
+    }
+  })
 
 
 
