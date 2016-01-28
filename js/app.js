@@ -8,7 +8,13 @@
   .directive("carouselSlideshow", function() {
     return {
       restrict: "E",
-      templateUrl: "shared/carouselSlideshow.html"
+      templateUrl: "shared/carousel/carouselSlideshow.html"
+    }
+  })
+  .directive("navBar", function() {
+    return {
+      restrict: "E",
+      templateUrl: "shared/navigation/navBar.html"
     }
   });
 
