@@ -59,6 +59,18 @@ a#logo {
   }
 }
 
+div#quote {
+  margin: 0 auto;
+  padding: 0 1em;
+  text-align: center;
+  font: {
+    style: italic;
+    size: .8em;
+  }
+  color: darken($sageColor, 30%);
+  // border: 1px solid blue;
+}
+
 div#myCarousel {
   height: 300px;
   overflow: hidden;
@@ -336,6 +348,11 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     @include testBorder(purple);
   }
 
+  div#quote {
+    line-height: 1.8em;
+    text-align: right;
+  }
+
   nav {
     ul {
     display: flex;
@@ -389,6 +406,10 @@ MEDIA QUERY FOR LARGE SCREENS > 768px
 
 @media screen and (min-width: 768px) {
 
+  div#quote {
+    line-height: 2.6em;
+  }
+
   blockquote.testimonial {
     border: none;
     padding: 1em;
@@ -407,11 +428,14 @@ MEDIA QUERY FOR LARGE SCREENS > 768px
 
 
 /* ------------------------------------------------------------
-MEDIA QUERY FOR LARGER SCREENS > 1000px
+MEDIA QUERY FOR LARGEST SCREENS > 1000px
 -------------------------------------------------------------*/
 
 @media screen and (min-width: 1000px) {
 
+  div#quote {
+    line-height: 4em;
+  }
 
   div.two-columns {
     flex-direction: row;

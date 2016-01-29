@@ -14,15 +14,15 @@
       })
       .state("acupuncture", {
         url: "/acupuncture",
-        templateUrl: "acupuncture.html"
+        templateUrl: "partials/acupuncture.html"
       })
       .state("chinese-herbal-medidine", {
         url: "/chinese-herbal-medicine",
-        templateUrl: "chineseHerbalMedicine.html"
+        templateUrl: "partials/chineseHerbalMedicine.html"
       })
       .state("bio", {
         url: "/bio",
-        templateUrl: "bio.html"
+        templateUrl: "partials/bio.html"
       })
   })
   .directive("carouselSlideshow", function() {
@@ -35,12 +35,6 @@
     return {
       restrict: "E",
       templateUrl: "shared/navigation/navBar.html"
-    }
-  })
-  .directive("logo", function() {
-    return {
-      restrict: "E",
-      templateUrl: "shared/logo/logo.html"
     }
   })
   .directive("visionMission", function() {
