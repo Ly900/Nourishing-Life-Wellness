@@ -10,11 +10,19 @@
     $stateProvider
       .state("home", {
         url: "/",
-        templateUrl: "index.html"
+        templateUrl: "partials/home.html"
       })
       .state("acupuncture", {
         url: "/acupuncture",
         templateUrl: "acupuncture.html"
+      })
+      .state("chinese-herbal-medidine", {
+        url: "/chinese-herbal-medicine",
+        templateUrl: "chineseHerbalMedicine.html"
+      })
+      .state("bio", {
+        url: "/bio",
+        templateUrl: "bio.html"
       })
   })
   .directive("carouselSlideshow", function() {
