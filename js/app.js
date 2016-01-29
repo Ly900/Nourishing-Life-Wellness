@@ -2,8 +2,20 @@
 
 (function(){
   angular
-  .module("practice", [])
+  .module("practice", ["ui.router"])
   .controller("practiceCtrl", function() {
+  })
+  .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/home");
+    $stateProvider
+      .state("home", {
+        url: "/",
+        templateUrl: "index.html"
+      })
+      .state("acupuncture", {
+        url: "/acupuncture",
+        templateUrl: "acupuncture.html"
+      })
   })
   .directive("carouselSlideshow", function() {
     return {
