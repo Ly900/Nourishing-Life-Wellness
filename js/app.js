@@ -1,12 +1,12 @@
 "use strict";
 
 (function(){
-  angular
-  .module("practice", ["ui.router"])
-  .controller("practiceCtrl", function() {
-  })
-  .config(function($stateProvider, $urlRouterProvider) {
+  var app = angular.module("practice", ["ui.router"]);
+
+  app.config(function($stateProvider, $urlRouterProvider) {
+
     $urlRouterProvider.otherwise("/home");
+
     $stateProvider
       .state("home", {
         url: "/",
