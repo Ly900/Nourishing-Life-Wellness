@@ -1,69 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="practice">
-<head>
-  <meta charset="UTF-8">
-  <title>Nourishing Life Wellness</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nourishing Life Wellness</title>
 
-  <!-- BOOTSTRAP -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <!-- MY CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
 
-</head>
-<body data-ng-controller="practiceCtrl as practice">
+  </head>
 
-  <header>
-    <logo></logo>
-    <nav-bar></nav-bar>
-  </header>
+  <body data-ng-controller="practiceCtrl as practice">
 
-  <div class="container-fluid">
+    <header>
+      <logo></logo>
+      <nav-bar></nav-bar>
+    </header>
 
-    <carousel-slideshow></carousel-slideshow>
+    <div class="container-fluid">
 
-    <vision-mission></vision-mission>
+      <carousel-slideshow></carousel-slideshow>
 
-    <img src="assets/images/hr-long.png" class="hr-long" alt="horizontal break"/>
+      <vision-mission></vision-mission>
 
-    <testimonials></testimonials>
+      <img src="assets/images/hr-long.png" class="hr-long" alt="horizontal break"/>
+
+      <testimonials></testimonials>
 
       <div class="container">
         <img src="assets/images/hr-small.png" class="hr hr-small-disappears" alt="horizontal break"/>
         <img src="assets/images/hr-long.png" class="hr-long" alt="horizontal break"/>
       </div>
 
-    <section class="content contact">
-    <h1 id="contact">Contact</h1>
+      <contact></contact>
 
-    <div>
-    	<p>
-        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-        443-312-9560
-      </p>
-      <p>
-        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-        7750 Montpelier Road,<br/>
-  	    Laurel MD 20723
-      </p>
-      <p>
-        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-        <a href="mailto:nguyentopia@gmail.com">Email us</a>
-      </p>
-    </div>
+      <footer>
+        Copyright &copy; 2016. Nourishing Life Wellness. All rights reserved.
+      </footer>
 
-
-    </section>
-    <!-- ENDS INFORMATIONAL SECTIONS -->
-
-  <footer>
-    Copyright &copy; 2016. Nourishing Life Wellness. All rights reserved.
-  </footer>
-
-  </div> <!-- Ends div class container fluid -->
+    </div> <!-- Ends div class container fluid -->
 
   <!-- ANGULAR CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>

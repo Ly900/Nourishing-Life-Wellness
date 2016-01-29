@@ -34,6 +34,12 @@
       restrict: "E",
       templateUrl: "shared/testimonials/testimonials.html"
     }
+  })
+  .directive("contact", function() {
+    return {
+      restrict: "E",
+      templateUrl: "shared/contact/contact.html"
+    }
   });
 
 
