@@ -275,6 +275,7 @@ blockquote.testimonial {
   padding: 1em;
   text-align: center;
   font-style: italic;
+  font-size: 1em;
   &:before, &:after {
     color: darken($lavenderColor, 30%);
     font-size: 4em;
@@ -343,6 +344,7 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     ul {
     display: flex;
     justify-content: space-around;
+    font-size: 1.5em;
     // border: 1px solid red;
       li {
         display: flex;
@@ -392,19 +394,19 @@ MEDIA QUERY FOR LARGE SCREENS > 768px
 
 @media screen and (min-width: 768px) {
 
-    blockquote.testimonial {
-      border: none;
-      padding: 1em;
-      text-align: center;
-      font-style: italic;
-      opacity: .8;
-      &:before {
-        content: "";
-      }
-      &:after {
-        content: "";
-      }
+  blockquote.testimonial {
+    border: none;
+    padding: 1em;
+    text-align: center;
+    font-style: italic;
+    opacity: .8;
+    &:before {
+      content: "";
     }
+    &:after {
+      content: "";
+    }
+  }
 
 }
 
@@ -440,6 +442,15 @@ MEDIA QUERY FOR LARGER SCREENS > 1000px
 MEDIA QUERY FOR LARGEST SCREENS > 1600px
 -------------------------------------------------------------*/
 @media screen and (min-width: 1600px) {
+
+  body {
+    font-size: 200%;
+    max-width: 2000px;
+  }
+
+  a#logo img#logo {
+    max-width: 500px;
+  }
 
   div#myCarousel {
     height: 800px;
