@@ -242,12 +242,16 @@ section.contact {
 }
 section.acupuncture {
   p {
+    width: 100%;
+    display: block;
     text-align: center;
+    &:nth-child(even) {
+      background-color: #eee;
+    }
   }
 }
 
 ul#acupuncture li {
-  list-style-type: circle;
   list-style-position: inside;
 }
 
