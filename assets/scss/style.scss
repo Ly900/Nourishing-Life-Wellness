@@ -156,27 +156,38 @@ nav {
 /* ------------------------------------------------------------
 IMAGES
 -------------------------------------------------------------*/
-img#logo {
+img {
+  &#logo {
   max-width: 75%;
   @include testBorder(purple);
+  }
+  &.hr {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    display: block;
+  }
+  &.hr-small-disappears {
+    padding: 0 2em;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  &.hr-long {
+    margin: 0 auto;
+    display: none;
+  }
+  &.section-image {
+    border-radius: 10%;
+    box-shadow: 3px 2px 10px gray;
+    width: 100%;
+    margin: 1em auto;
+    opacity: .9;
+    float: right;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
-
-img.hr {
-  padding-top: 2em;
-  padding-bottom: 1em;
-}
-
-img.hr-small-disappears {
-  padding: 0 2em;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-img.hr-long {
-  margin: 0 auto;
-  display: none;
-}
-
 
 /* ------------------------------------------------------------
 SECTIONS
@@ -229,6 +240,16 @@ section.contact {
     }
   }
 }
+section.acupuncture {
+  p {
+    text-align: center;
+  }
+}
+
+ul#acupuncture li {
+  list-style-type: circle;
+  list-style-position: inside;
+}
 
 /* ------------------------------------------------------------
 HEADINGS
@@ -248,7 +269,7 @@ h1 {
   &#vision, &#testimonials {
     color: darken($lavenderColor, 30%);
   }
-  &#mission, &#contact {
+  &#mission, &#contact, &#acupuncture {
     color: darken($sageColor, 30%);
   }
 }
@@ -327,6 +348,7 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
 
   body {
     max-width: 75%;
+    min-width: 300px;
     margin-top: 2em;
     margin-bottom: 2em;
   }
@@ -422,6 +444,11 @@ MEDIA QUERY FOR LARGE SCREENS > 768px
     &:after {
       content: "";
     }
+  }
+
+  img.section-image {
+    max-width: 50%;
+    margin: .2em;
   }
 
 }
