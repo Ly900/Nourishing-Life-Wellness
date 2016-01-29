@@ -11,11 +11,8 @@ body, header, footer, section, div, span, nav, ul, ol, div, li, a, img, h1 {
 MAIN STYLES
 -------------------------------------------------------------*/
 $mainFontFamily: "Source Sans Pro", sans-serif;
-$mainFontColor: #000;
 $sageColor: #B8C8A3;
 $lavenderColor: #C9B1DF;
-$lavenderColor2: #C9B0E0;
-$grayColor: #F5F5F5;
 $navBGcolor: darken($sageColor, 20%);
 
 @mixin testBorder($color) {
@@ -36,7 +33,6 @@ body {
         size: 100%;
         weight: 300;
       }
-  color: $mainFontColor;
   max-width: 100%;
   margin: 0 auto;
   letter-spacing: .1em;
