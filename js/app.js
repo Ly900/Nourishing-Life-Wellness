@@ -28,6 +28,12 @@
       restrict: "E",
       templateUrl: "shared/vision_mission/visionMission.html"
     }
+  })
+  .directive("testimonials", function() {
+    return {
+      restrict: "E",
+      templateUrl: "shared/testimonials/testimonials.html"
+    }
   });
 
 
