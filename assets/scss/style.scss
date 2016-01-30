@@ -201,6 +201,8 @@ section.content {
 section.vision {
   transition: 1s;
   -webkit-transition: 1s;
+  float: left;
+  margin: auto;
 }
 
 section.vision:hover {
@@ -213,7 +215,7 @@ section.vision:hover {
 section.mission {
   transition: 1s;
   -webkit-transition: 1s;
-  color: black;
+  float: right;
 }
 
 section.mission:hover {
@@ -283,8 +285,9 @@ CONTAINERS
 -------------------------------------------------------------*/
 
 div.two-columns {
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 div.container {
@@ -459,8 +462,8 @@ MEDIA QUERY FOR LARGEST SCREENS > 1000px
     line-height: 4em;
   }
 
-  div.two-columns {
-    flex-direction: row;
+  section.vision, section.mission {
+    width: 50%;
   }
 
   img.hr-small-disappears {
