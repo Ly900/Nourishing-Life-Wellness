@@ -23,8 +23,7 @@ html {
   font-size: 18px;
   background-color: lighten($sageColor, 10%);
   background-image: url("../images/sageBG.jpg");
-    // background-image: url("../images/sageBG2.jpg");
-      // background-image: url("../images/sageBG3.jpg");
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -72,6 +71,7 @@ div#quote {
 }
 
 div#myCarousel {
+  min-width: 320px;
   height: 300px;
   overflow: hidden;
   opacity: 0.9;
@@ -288,7 +288,7 @@ div.two-columns {
 }
 
 div.container {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
