@@ -36,7 +36,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   letter-spacing: .1em;
-  @include testBorder(blue);
+  // @include testBorder(blue);
 }
 
 header {
@@ -104,12 +104,8 @@ a:focus {
   text-decoration: none;
 }
 
-a:hover {
-  font-weight: bolder;
-}
-
 nav {
-  box-shadow: inset 0px 2px 5px white;
+  clear: both;
   width: 100%;
   ul {
     width: 100%;
@@ -119,29 +115,22 @@ nav {
     @include testBorder(red);
   }
   li {
+    height: 40px;
     width: 100%;
     list-style-type: none;
-    @include testBorder(red);
-  }
-  a,
-  a:hover,
-  a:active,
-  a:visited,
-  a:focus {
-    width: 100%;
-    display: block;
-    color: $navFontColor;
     background-color: $navBGcolor;
-    font-variant: small-caps;
-  }
-  a {
+    @include testBorder(orange);
+    display: block;
     @include navBorder(darken($navBGcolor, 5%));
     box-shadow: inset 0px 3px 5px lighten($navBGcolor, 10%);
-        text-shadow: 0px 2px 5px darken($navBGcolor, 40%);
+    text-shadow: 0px 2px 5px darken($navBGcolor, 40%);
+    display: block;
+    font-variant: small-caps;
     &:hover {
       background-color: lighten($navBGcolor, 5%);
       box-shadow: inset 0px 5px 10px lighten($navBGcolor, 20%);
       text-shadow: 0px 3px 2px darken($navBGcolor, 80%);
+      font-weight: bolder;
     }
     &:active {
       background-color: darken($navBGcolor, 5%);
@@ -149,6 +138,16 @@ nav {
       box-shadow: inset 0px 2px 10px darken($navBGcolor, 50%);
       text-shadow: 0px 2px 5px darken($navBGcolor, 40%);
     }
+  }
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:focus {
+    width: 100%;
+    color: white;
+    display: block;
+    @include testBorder(blue);
   }
   @include testBorder(gray);
 }
@@ -357,6 +356,10 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     margin-bottom: 2em;
   }
 
+  nav ul {
+    clear: both;
+  }
+
   header {
     text-align: left;
   }
@@ -365,7 +368,7 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     max-width: 100%;
     text-align: left;
     float: left;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     background-color: lighten($sageColor, 70%);
     img#logo {
       max-width: 200px;
@@ -378,39 +381,6 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     line-height: 1.8em;
     text-align: right;
   }
-
-  nav {
-    ul {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.5em;
-    // border: 1px solid red;
-      li {
-        display: flex;
-        align-content: center;
-        border-right: 2px solid white;
-        border-bottom: none;
-        &:last-child {
-          border-right: none;
-        }
-      }
-    }
-    a {
-      box-shadow: 0px 0px 0px;
-    }
-
-    a,
-    a:hover,
-    a:focus {
-      align-self: stretch;
-      display: flex;
-      span {
-        width: 100%;
-        align-self: center;
-        // border: 1px solid orange;
-      }
-    }
-  } /* ends nav element */
 
   div#myCarousel {
     height: 400px;
@@ -463,6 +433,27 @@ MEDIA QUERY FOR LARGEST SCREENS > 1000px
 -------------------------------------------------------------*/
 
 @media screen and (min-width: 1000px) {
+
+  nav {
+    ul {
+    display: table;
+    font-size: 1.5em;
+    clear: both;
+      li {
+        vertical-align: middle;
+        display: table-cell;
+        width: 30%;
+        border-right: 2px solid white;
+        border-bottom: none;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    a {
+      box-shadow: 0px 0px 0px;
+    }
+  } /* ends nav element */
 
   div#quote {
     line-height: 4em;
