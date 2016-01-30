@@ -104,11 +104,13 @@ a:focus {
   text-decoration: none;
 }
 
+nav, nav ul, nav li {
+  width: 100%;
+}
+
 nav {
   clear: both;
-  width: 100%;
   ul {
-    width: 100%;
     font-size: 1.5em;
     text-align: center;
     margin: .5em auto 0em;
@@ -116,7 +118,6 @@ nav {
   }
   li {
     height: 40px;
-    width: 100%;
     list-style-type: none;
     background-color: $navBGcolor;
     @include testBorder(orange);
@@ -198,31 +199,38 @@ section.content {
   // @include testBorder(blue);
 }
 
-section.vision {
+section.vision, section.mission {
   transition: 1s;
   -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+}
+
+section.vision {
   float: left;
-  margin: auto;
+}
+
+
+section.mission {
+  float: right;
+}
+
+section.vision:hover,
+section.mission:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 section.vision:hover {
   background-color: lighten($lavenderColor, 10%);
   color: darken($lavenderColor, 50%);
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-}
-
-section.mission {
-  transition: 1s;
-  -webkit-transition: 1s;
-  float: right;
 }
 
 section.mission:hover {
   background-color: lighten($sageColor, 10%);
   color: darken($sageColor, 50%);
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
 }
 
 section.contact {
