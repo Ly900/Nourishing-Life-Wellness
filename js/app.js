@@ -3,7 +3,7 @@
 (function(){
   var app = angular.module("practice", ["ui.router"]);
 
-  app.config(function($stateProvider, $urlRouterProvider) {
+  app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $urlRouterProvider.otherwise("/");
 
@@ -16,7 +16,7 @@
         url: "/acupuncture",
         templateUrl: "partials/acupuncture.html"
       })
-      .state("chinese-herbal-medidine", {
+      .state("chinese-herbal-medicine", {
         url: "/chinese-herbal-medicine",
         templateUrl: "partials/chineseHerbalMedicine.html"
       })
@@ -24,6 +24,9 @@
         url: "/bio",
         templateUrl: "partials/bio.html"
       })
+
+    $locationProvider.html5Mode(true);
+
   })
   .directive("carouselSlideshow", function() {
     return {
