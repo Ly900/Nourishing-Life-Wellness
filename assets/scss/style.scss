@@ -5,6 +5,8 @@ body, header, footer, section, div, span, nav, ul, ol, div, li, a, img, h1 {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
 }
 
 /* ------------------------------------------------------------
@@ -177,12 +179,11 @@ img {
     display: none;
   }
   &.section-image {
-    border-radius: 10%;
+    border-radius: 50%;
     box-shadow: 3px 2px 10px gray;
-    width: 100%;
+    max-width: 100%;
     margin: 1em auto;
     opacity: .9;
-    float: right;
     &:hover {
       opacity: 1;
     }
@@ -249,21 +250,32 @@ section.contact {
     }
   }
 }
-section.acupuncture {
-  p {
-    width: 100%;
-    display: block;
-    text-align: center;
-    &:nth-child(even) {
-      background-color: #eee;
-    }
-  }
-}
 
 ul#acupuncture li {
   list-style-position: inside;
 }
 
+div.acupuncture-image {
+  width: 100%;
+  display: block;
+  float: left;
+  border-radius: 50%;
+  margin: 0 auto;
+  text-align: center;
+  // -webkit-shape-outside:circle();
+  // shape-outside:circle();
+}
+
+div.acupuncture-p {
+  // border: 5px solid purple;
+  text-align: center;
+  margin: 1em auto;
+  display: block;
+}
+
+div.WHO {
+  clear:both;
+}
 /* ------------------------------------------------------------
 HEADINGS
 -------------------------------------------------------------*/
@@ -338,7 +350,11 @@ blockquote.testimonial {
     color: darken($sageColor, 30%);
     font-weight: 600;
   }
+  &:hover {
+    color: black;
+  }
 }
+
 
 
 /* ------------------------------------------------------------
@@ -405,6 +421,10 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     max-width: 75%;
   }
 
+  h1#acupuncture:after {
+    content: "MEDIUM SCREEN";
+  }
+
 } /* Ends medium media query */
 
 /* ------------------------------------------------------------
@@ -412,6 +432,10 @@ MEDIA QUERY FOR LARGE SCREENS > 768px
 -------------------------------------------------------------*/
 
 @media screen and (min-width: 768px) {
+
+  h1#acupuncture:after {
+    content: "LARGE SCREEN";
+  }
 
   div#quote {
     line-height: 2.6em;
@@ -431,19 +455,37 @@ MEDIA QUERY FOR LARGE SCREENS > 768px
     }
   }
 
-  img.section-image {
-    max-width: 50%;
-    margin: .2em;
-  }
-
 }
 
 
 /* ------------------------------------------------------------
-MEDIA QUERY FOR LARGEST SCREENS > 1000px
+MEDIA QUERY FOR LARGER SCREENS > 1000px
 -------------------------------------------------------------*/
 
 @media screen and (min-width: 1000px) {
+
+  h1#acupuncture:after {
+    content: "LARGER SCREEN";
+  }
+
+  div.acupuncture-image {
+    margin: 1em;
+    float: left;
+    width: 20%;
+    min-width: 300px;
+    -webkit-shape-outside:circle();
+    shape-outside:circle();
+    margin-right: 3em;
+  }
+
+  div.acupuncture-p {
+    text-align: center;
+    // margin: 0 auto;
+  }
+
+  footer {
+    clear: both;
+  }
 
   nav {
     ul {
@@ -489,6 +531,15 @@ MEDIA QUERY FOR LARGEST SCREENS > 1000px
 
 } /* Ends media query for larger screens */
 
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGEST SCREENS > 1600px
+-------------------------------------------------------------*/
+@media screen and (min-width: 1026px) {
+
+
+
+
+}
 
 /* ------------------------------------------------------------
 MEDIA QUERY FOR LARGEST SCREENS > 1600px
