@@ -3,7 +3,7 @@
 (function(){
   var app = angular.module("practice", ["ui.router"]);
 
-  app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+  app.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
 
@@ -24,8 +24,6 @@
         url: "/bio",
         templateUrl: "partials/bio.html"
       })
-
-    $locationProvider.html5Mode(true);
 
   })
   .directive("carouselSlideshow", function() {

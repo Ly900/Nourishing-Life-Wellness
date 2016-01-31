@@ -236,17 +236,27 @@ section.mission:hover {
 
 section.contact {
   // border: 1px solid red;
-  div {
-    // border: 2px solid blue;
-    font-size: 1.2em;
+  width: 100%;
+  margin: 0 auto;
+  div.row {
+    text-align: center;
+    border: none;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
     line-height: 2;
-    background-color: lighten($sageColor, 25%);
-    border-radius: 5px;
-    &:hover {
-      background-color: lighten($sageColor, 20%);
+  }
+  span {
+    display:block;
+    i.fa {
+      border-radius: 100%;
+      padding: .2em;
+      background-color: darken($lavenderColor, 5%);
+      width: 1.6em;
+      height: 1.6em;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2em;
+      color: white;
     }
   }
 }
@@ -392,10 +402,6 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     }
   }
 
-  section.contact div {
-    max-width: 75%;
-  }
-
 } /* Ends medium media query */
 
 /* ------------------------------------------------------------
@@ -472,6 +478,18 @@ MEDIA QUERY FOR LARGER SCREENS > 1000px
   img.hr {
     padding-top: 1em;
   }
+
+  section.contact div.row {
+    text-align: center;
+    border: none;
+      span {
+        padding: .3em;
+        i.fa {
+          font-size: 3em;
+          padding: .3em;
+        }
+      }
+    }
 
 } /* Ends media query for larger screens */
 
