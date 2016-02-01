@@ -182,7 +182,7 @@ img {
     border-radius: 100%;
     box-shadow: 3px 2px 10px gray;
     max-width: 100%;
-    margin: 2em auto;
+    margin: 0 auto;
     opacity: .9;
     &:hover {
       opacity: 1;
@@ -293,7 +293,7 @@ HEADINGS
     variant: small-caps;
   }
   text-align: center;
-  margin: 1em auto;
+  margin: .5em auto;
 }
 
 h1 {
@@ -301,7 +301,7 @@ h1 {
   &#vision, &#testimonials, &#chinese {
     color: darken($lavenderColor, 30%);
   }
-  &#mission, &#contact, &#acupuncture {
+  &#mission, &#contact, &#acupuncture, &#khanh {
     color: darken($sageColor, 30%);
   }
 }
@@ -575,7 +575,7 @@ ACUPUNCTURE FOR LARGER SCREENS > 800px
 @media screen and (min-width: 800px) {
 
   div.section-image {
-    margin: 2em;
+    margin: 3em;
     float: left;
     width: 20%;
     min-width: 300px;
@@ -602,11 +602,8 @@ BIO - REGULAR STYLING
 -------------------------------------------------------------*/
 img.section-image.khanh {
   opacity: 1;
-}
-
-span.sage {
-  color: darken($lavenderColor, 20%);
-  text-align: center;
+  width: 50%;
+  margin: 1em;
 }
 
 h2 {
@@ -614,5 +611,17 @@ h2 {
   margin: 0 auto;
   font-size: 1.3em;
   font-weight: 400;
-  color: darken($lavenderColor, 40%);
+  color: darken($sageColor, 40%);
+}
+
+/* ------------------------------------------------------------
+BIO > 800px
+-------------------------------------------------------------*/
+
+@media screen and (min-width: 800px) {
+
+  img.section-image.khanh {
+    width: 100%;
+  }
+
 }
