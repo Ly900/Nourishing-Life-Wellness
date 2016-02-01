@@ -2,9 +2,9 @@
 
 (function(){
   var app = angular.module("practice", ["ui.router"]);
-  app.controller("practiceCtrl", function($scope) {
+  app.controller("practiceCtrl", ["$scope", function($scope) {
     $scope.showMap = false;
-  })
+  }]);
   app.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
@@ -26,7 +26,6 @@
         url: "/bio",
         templateUrl: "partials/bio.html"
       })
-
   })
   .directive("carouselSlideshow", function() {
     return {
@@ -58,12 +57,6 @@
       templateUrl: "shared/contact/contact.html"
     }
   });
-
-
-
-
-
-
 
 
 

@@ -48,7 +48,7 @@ div.container-fluid {
   padding: 0;
 }
 
-a#logo {
+a.logo {
   max-width: 75%;
   text-align: center;
   margin: 0 auto;
@@ -398,7 +398,7 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
     text-align: left;
   }
 
-  a#logo {
+  a.logo {
     max-width: 100%;
     text-align: left;
     float: left;
@@ -524,7 +524,7 @@ MEDIA QUERY FOR LARGEST SCREENS > 1600px
     max-width: 2000px;
   }
 
-  a#logo img#logo {
+  a.logo img#logo {
     max-width: 500px;
   }
 
@@ -587,3 +587,15 @@ ACUPUNCTURE FOR LARGER SCREENS > 800px
 /* ------------------------------------------------------------
 CHINESE HERBAL MEDICINE - REGULAR STYLING
 -------------------------------------------------------------*/
+@media screen and (min-width: 800px) {
+
+  div.section-image.chinese {
+    margin: 2em;
+    float: right;
+    width: 20%;
+    min-width: 300px;
+    -webkit-shape-outside:circle();
+    shape-outside:circle();
+  }
+
+}
