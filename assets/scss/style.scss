@@ -375,6 +375,7 @@ footer {
   background-color: lighten($navBGcolor, 5%);
   text-shadow: 0px 2px 5px darken($navBGcolor, 40%);
   margin-top: 3em;
+  clear: both;
 }
 
 /* ------------------------------------------------------------
@@ -585,17 +586,33 @@ ACUPUNCTURE FOR LARGER SCREENS > 800px
 }
 
 /* ------------------------------------------------------------
-CHINESE HERBAL MEDICINE - REGULAR STYLING
+CHINESE HERBAL MEDICINE > 800px
 -------------------------------------------------------------*/
 @media screen and (min-width: 800px) {
 
-  div.section-image.chinese {
-    margin: 2em;
+  div.chinese {
     float: right;
-    width: 20%;
-    min-width: 300px;
-    -webkit-shape-outside:circle();
-    shape-outside:circle();
+    margin: 3em auto;
   }
 
+}
+
+/* ------------------------------------------------------------
+BIO - REGULAR STYLING
+-------------------------------------------------------------*/
+img.section-image.khanh {
+  opacity: 1;
+}
+
+span.sage {
+  color: darken($lavenderColor, 20%);
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: darken($lavenderColor, 40%);
 }
