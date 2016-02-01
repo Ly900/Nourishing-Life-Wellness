@@ -2,7 +2,9 @@
 
 (function(){
   var app = angular.module("practice", ["ui.router"]);
-
+  app.controller("practiceCtrl", function($scope) {
+    $scope.showMap = false;
+  })
   app.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
