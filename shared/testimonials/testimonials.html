@@ -29,7 +29,7 @@
     <!-- Third and fourth testimonials -->
     <div class="row">
 
-      <div class="col-sm-6">
+      <div class="col-sm-6" data-ng-show="showTestimonials">
         <blockquote class="testimonial">
           <p>
             “Thank you very much for this intriguing journey on my path of returning to self-care for improved health and wellbeing with your assistance via acupuncture, Chinese herbs and my favorite, guasha.  I always feel a positive healthy difference when leaving our sessions together.”
@@ -38,7 +38,7 @@
         </blockquote>
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-6" data-ng-show="showTestimonials">
         <blockquote class="testimonial">
           <p>
             “Khanh has and continues to help me through my anxiety, depression, and anger with acupuncture.  She cares for me with compassion, patience, truthfulness, and most importantly, LOVE.  Khanh provides a space where I am comfortable to tell her anything without feeling judged.”
@@ -52,7 +52,7 @@
 
     <!-- Begin fifth and sixth testimonials -->
 
-    <div class="col-sm-6">
+    <div class="col-sm-6" data-ng-show="showTestimonials">
       <blockquote class="testimonial">
         <p>
           “I have been seeing Khanh for fatigue, major depression, skin conditions, and liver problems for about a year now, and she has been wonderful in helping me return to health.  In the course of just the first three months, the Chinese herbal formula she has made for me got rid of my fatigue and within 6 months, my major depression was nearly non-existent. Khanh has been a very wonderful practitioner to me, and she is extremely attentive and analytical.”
@@ -61,7 +61,7 @@
       </blockquote>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-6" data-ng-show="showTestimonials">
       <blockquote class="testimonial">
         <p>
           “I was curious to see if Chinese Medicine could help me with my high blood glucose, high cholesterol, liver, and renal functions.  My bloodwork was off the charts, to the point where my triglyceride level was on alert for cardiac disease.  Khanh gave me a Chinese herbal formula and within a short 3 months, my glucose, cholesterol, and triglyceride numbers were reduced by 60-75% and are now ALL within normal limits.  My liver and renal function improved, and my spirit has improved so much!”
@@ -71,6 +71,8 @@
     </div>
 
     <!-- Ends fifth and sixth testimonials -->
+
+    <a data-ng-click="showHideTestimonials()" class="testimonial-button">{{testimonialDirection}} testimonials</a>
 
   </section>
 

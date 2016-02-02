@@ -280,7 +280,6 @@ section.contact {
     }
   }
 
-
 }
 
 /* ------------------------------------------------------------
@@ -356,6 +355,18 @@ blockquote.testimonial {
   &:hover {
     color: black;
   }
+
+}
+
+a.testimonial-button {
+  cursor: pointer;
+  color: darken($sageColor, 30%);
+  font-weight: 400;
+}
+
+a.testimonial-button:hover {
+  font-weight: 700;
+  color: darken($lavenderColor, 30%);
 }
 
 /* ------------------------------------------------------------

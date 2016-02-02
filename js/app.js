@@ -6,12 +6,18 @@
   ]);
   app.controller("practiceCtrl", ["$scope", function($scope) {
     $scope.showMap = false;
-    // $scope.initMap = function() {
-    //   map = new google.maps.Map(document.getElementById('map'), {
-    //     center: {lat: -34.397, lng: 150.644},
-    //     zoom: 8
-    //   });
-    // }
+    $scope.showTestimonials = false;
+    $scope.testimonialDirection = "Read more";
+    $scope.showHideTestimonials = function() {
+      if ($scope.showTestimonials === false) {
+        $scope.showTestimonials = true;
+        $scope.testimonialDirection = "Hide";
+      } else {
+        $scope.showTestimonials = false;
+        $scope.testimonialDirection = "Read more";
+      }
+    };
+
   }]);
   app.config(function($stateProvider, $urlRouterProvider) {
 
