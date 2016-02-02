@@ -1,9 +1,17 @@
 "use strict";
 
 (function(){
-  var app = angular.module("practice", ["ui.router"]);
+  var app = angular.module("practice", [
+    "ui.router"
+  ]);
   app.controller("practiceCtrl", ["$scope", function($scope) {
     $scope.showMap = false;
+    // $scope.initMap = function() {
+    //   map = new google.maps.Map(document.getElementById('map'), {
+    //     center: {lat: -34.397, lng: 150.644},
+    //     zoom: 8
+    //   });
+    // }
   }]);
   app.config(function($stateProvider, $urlRouterProvider) {
 
