@@ -580,7 +580,7 @@ ACUPUNCTURE FOR LARGER SCREENS > 800px
   }
 
   div.section-p.first {
-    text-align: right;
+    text-align: left;
   }
 
 }
@@ -590,11 +590,15 @@ CHINESE HERBAL MEDICINE > 800px
 -------------------------------------------------------------*/
 @media screen and (min-width: 800px) {
 
-  div.chinese {
+  div.section-image.chinese {
     float: right;
-    margin: 4em auto;
+    margin: 1em;
+    margin-bottom: 0;
   }
 
+  div.section-p.chinese p {
+    text-align: justify;
+  }
 }
 
 /* ------------------------------------------------------------
