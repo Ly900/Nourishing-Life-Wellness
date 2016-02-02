@@ -579,8 +579,11 @@ ACUPUNCTURE FOR LARGER SCREENS > 800px
     }
   }
 
-  div.section-p.first {
-    text-align: left;
+  div.section-p {
+    text-align: justify;
+    &.list {
+      text-align: center;
+    }
   }
 
 }
@@ -604,13 +607,9 @@ CHINESE HERBAL MEDICINE > 800px
 /* ------------------------------------------------------------
 BIO - REGULAR STYLING
 -------------------------------------------------------------*/
-img.section-image.khanh {
-  opacity: .9;
+img.section-image.bio {
   width: 50%;
   margin: 1em;
-  &:hover {
-    opacity: 1;
-  }
 }
 
 h2 {
@@ -627,8 +626,9 @@ BIO > 800px
 
 @media screen and (min-width: 800px) {
 
-  img.section-image.khanh {
+  img.section-image.bio {
     width: 100%;
+    margin: 0;
   }
 
 }
