@@ -331,7 +331,7 @@ div.container {
 TESTIMONIALS
 -------------------------------------------------------------*/
 blockquote.testimonial {
-  color: gray;
+  font-weight: 300;
   position: relative;
   border: none;
   padding: 1em;
@@ -358,7 +358,7 @@ blockquote.testimonial {
     font-weight: 600;
   }
   &:hover {
-    color: black;
+    font-weight: 400;
   }
 
 }
