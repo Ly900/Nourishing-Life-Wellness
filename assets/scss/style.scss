@@ -69,7 +69,9 @@ div#quote {
     size: .8em;
   }
   color: darken($sageColor, 30%);
-  // border: 1px solid blue;
+  span {
+    display: block;
+  }
 }
 
 div#myCarousel {
@@ -395,10 +397,10 @@ footer {
 }
 
 /* ------------------------------------------------------------
-MEDIA QUERY FOR MEDIUM SCREENS > 550px
+MEDIA QUERY FOR MEDIUM SCREENS > 580px
 -------------------------------------------------------------*/
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 580px) {
 
   body {
     max-width: 75%;
@@ -430,7 +432,14 @@ MEDIA QUERY FOR MEDIUM SCREENS > 550px
 
   div#quote {
     line-height: 1.8em;
-    text-align: right;
+    margin: auto;
+    span.quote {
+      text-align: justify;
+      margin-bottom: 0;
+    }
+    span.person {
+      text-align: right;
+    }
   }
 
   div#myCarousel {
@@ -450,7 +459,7 @@ MEDIA QUERY FOR LARGE SCREENS > 768px
 @media screen and (min-width: 768px) {
 
   div#quote {
-    line-height: 2.6em;
+    margin-top: .5em;
   }
 
   blockquote.testimonial {
@@ -498,7 +507,7 @@ MEDIA QUERY FOR LARGER SCREENS > 1000px
   } /* ends nav element */
 
   div#quote {
-    line-height: 4em;
+    margin-top: 1em;
   }
 
   section.vision, section.mission {
@@ -530,31 +539,6 @@ MEDIA QUERY FOR LARGER SCREENS > 1000px
     }
 
 } /* Ends media query for larger screens */
-
-/* ------------------------------------------------------------
-MEDIA QUERY FOR LARGEST SCREENS > 1600px
--------------------------------------------------------------*/
-@media screen and (min-width: 1600px) {
-
-  body {
-    font-size: 200%;
-    max-width: 2000px;
-  }
-
-  a.logo img#logo {
-    max-width: 500px;
-  }
-
-  div#myCarousel {
-    height: 800px;
-    overflow: hidden;
-    img {
-      max-width: 100%;
-      min-height: 800px;
-    }
-  }
-
-} // ends largest screens media query
 
 
 /* ------------------------------------------------------------
@@ -652,3 +636,28 @@ BIO > 800px
   }
 
 }
+
+/* ------------------------------------------------------------
+MEDIA QUERY FOR LARGEST SCREENS > 1600px
+-------------------------------------------------------------*/
+@media screen and (min-width: 1600px) {
+
+  body {
+    font-size: 150%;
+    max-width: 1500px;
+  }
+
+  a.logo img#logo {
+    max-width: 500px;
+  }
+
+  div#myCarousel {
+    height: 800px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      min-height: 800px;
+    }
+  }
+
+} // ends largest screens media query
