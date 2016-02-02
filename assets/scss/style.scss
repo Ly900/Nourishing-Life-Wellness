@@ -251,6 +251,9 @@ section.contact {
   }
   span {
     display:block;
+    &:hover {
+      font-weight: 400;
+    }
     i.fa {
       border-radius: 100%;
       padding: .32em;
