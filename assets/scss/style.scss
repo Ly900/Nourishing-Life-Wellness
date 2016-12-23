@@ -612,6 +612,24 @@ CHINESE HERBAL MEDICINE > 800px
 }
 
 /* ------------------------------------------------------------
+FACIAL REJUVENATION - REGULAR STYLING
+-------------------------------------------------------------*/
+
+img.section-image.facial-rejuv {
+    width: 100%;
+    max-width: 250px;
+}
+
+p#facial-rejuv-benefits {
+  clear: both;
+}
+
+p#facial-rejuv-benefits,
+ul#facial-rejuv {
+  text-align: center;
+}
+
+/* ------------------------------------------------------------
 BIO - REGULAR STYLING
 -------------------------------------------------------------*/
 img.section-image.bio {

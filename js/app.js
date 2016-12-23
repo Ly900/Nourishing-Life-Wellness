@@ -16,7 +16,7 @@
         $scope.showTestimonials = false;
         $scope.testimonialDirection = "Read more";
       }
-    }; 
+    };
 
   }]);
   app.config(function($stateProvider, $urlRouterProvider) {
@@ -35,6 +35,10 @@
       .state("chinese-herbal-medicine", {
         url: "/chinese-herbal-medicine",
         templateUrl: "partials/chineseHerbalMedicine.html"
+      })
+      .state("facial-rejuvenation", {
+        url: "/facial-rejuvenation",
+        templateUrl: "partials/facialRejuvenation.html"
       })
       .state("bio", {
         url: "/bio",
