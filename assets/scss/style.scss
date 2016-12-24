@@ -363,13 +363,13 @@ blockquote.testimonial {
 
 }
 
-a.testimonial-button {
+a.reg-link {
   cursor: pointer;
   color: darken($sageColor, 30%);
   font-weight: 400;
 }
 
-a.testimonial-button:hover {
+a.reg-link:hover {
   font-weight: 700;
   color: darken($lavenderColor, 30%);
 }
@@ -614,7 +614,6 @@ CHINESE HERBAL MEDICINE > 800px
 /* ------------------------------------------------------------
 FACIAL REJUVENATION - REGULAR STYLING
 -------------------------------------------------------------*/
-
 img.section-image.facial-rejuv {
     width: 100%;
     max-width: 250px;
@@ -627,6 +626,25 @@ p#facial-rejuv-benefits {
 p#facial-rejuv-benefits,
 ul#facial-rejuv {
   text-align: center;
+}
+
+img.hr-long.facial-rejuv {
+  clear: both;
+}
+
+/* ------------------------------------------------------------
+FACIAL REJUVENATION > 800px
+-------------------------------------------------------------*/
+@media screen and (min-width: 800px) {
+
+  .section-image.facial-rejuv {
+      margin: 1em .5em .5em 0;
+  }
+
+  img.section-image.facial-rejuv {
+    margin-bottom: 0;
+  }
+
 }
 
 /* ------------------------------------------------------------
