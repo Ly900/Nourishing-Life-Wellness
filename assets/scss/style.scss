@@ -302,10 +302,10 @@ HEADINGS
 
 h1 {
   @include heading();
-  &#vision, &#testimonials, &#chinese {
+  &#vision, &#testimonials, &#chinese, &#khanh {
     color: darken($lavenderColor, 30%);
   }
-  &#mission, &#contact, &#acupuncture, &#khanh, &#facial-rejuv {
+  &#mission, &#contact, &#acupuncture, &#facial-rejuv {
     color: darken($sageColor, 30%);
   }
 }
@@ -659,7 +659,7 @@ h2 {
   text-align: center;
   margin: 0 auto;
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: normal;
   color: darken($sageColor, 40%);
 }
 
