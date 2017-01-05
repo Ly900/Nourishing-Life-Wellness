@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300);
+// @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
 
 body, header, footer, section, div, span, nav, ul, ol, div, li, a, img, h1 {
   margin: 0;
@@ -252,7 +252,7 @@ section.contact {
   span {
     display:block;
     &:hover {
-      font-weight: 400;
+      font-weight: bolder;
     }
     i.fa {
       border-radius: 100%;
@@ -277,7 +277,7 @@ section.contact {
     .map-button {
       cursor: pointer;
       color: darken($sageColor, 30%);
-      font-weight: 400;
+      font-weight: bolder;
     }
     .map-button:hover {
       font-weight: 700;
@@ -305,7 +305,7 @@ h1 {
   &#vision, &#testimonials, &#chinese {
     color: darken($lavenderColor, 30%);
   }
-  &#mission, &#contact, &#acupuncture, &#khanh {
+  &#mission, &#contact, &#acupuncture, &#khanh, &#facial-rejuv {
     color: darken($sageColor, 30%);
   }
 }
@@ -355,10 +355,10 @@ blockquote.testimonial {
   }
   span.cite {
     color: darken($sageColor, 30%);
-    font-weight: 600;
+    font-weight: bolder;
   }
   &:hover {
-    font-weight: 400;
+    font-weight: bolder;
   }
 
 }
@@ -366,7 +366,7 @@ blockquote.testimonial {
 a.reg-link {
   cursor: pointer;
   color: darken($sageColor, 30%);
-  font-weight: 400;
+  font-weight: bolder;
 }
 
 a.reg-link:hover {
@@ -567,7 +567,7 @@ div.section-p {
   ul {
     list-style-type: none;
     li:hover {
-      font-weight: 400;
+      font-weight: bolder;
     }
   }
 }
@@ -659,7 +659,7 @@ h2 {
   text-align: center;
   margin: 0 auto;
   font-size: 1.3em;
-  font-weight: 400;
+  font-weight: 600;
   color: darken($sageColor, 40%);
 }
 
