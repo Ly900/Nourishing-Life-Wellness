@@ -69,6 +69,12 @@
       templateUrl: "shared/testimonials/testimonials.html"
     };
   })
+  .directive("description", function() {
+    return {
+      restrict: "E",
+      templateUrl: "shared/description/description.html"
+    };
+  })
   .directive("contact", function() {
     return {
       restrict: "E",

@@ -302,10 +302,10 @@ HEADINGS
 
 h1 {
   @include heading();
-  &#vision, &#testimonials, &#chinese, &#khanh {
+  &#vision, &#description, &#contact, &#chinese, &#khanh {
     color: darken($lavenderColor, 30%);
   }
-  &#mission, &#contact, &#acupuncture, &#facial-rejuv {
+  &#mission, &#testimonials, &#acupuncture, &#facial-rejuv {
     color: darken($sageColor, 30%);
   }
 }
