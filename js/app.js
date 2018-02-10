@@ -82,4 +82,4 @@
 
 })(); // Ends IFFE
 
-// Using http-server
+// Type "http-server" in Terminal to start server.
