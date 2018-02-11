@@ -89,3 +89,5 @@
 })(); // Ends IFFE
 
 // Type "http-server" in Terminal to start server.
+
+// Type "sass --watch assets/scss/style.scss:assets/css/style.css"  in Terminal to compile SASS.
