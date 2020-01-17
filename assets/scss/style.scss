@@ -22,7 +22,7 @@ $navBGcolor: darken($sageColor, 20%);
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   background-color: lighten($sageColor, 10%);
   background-image: url("../images/sageBG.jpg");
   background-size: cover;
@@ -237,7 +237,6 @@ section.mission:hover {
 }
 
 section.contact {
-  // border: 1px solid red;
   width: 100%;
   margin: 0 auto;
   div.row {
@@ -245,8 +244,54 @@ section.contact {
     border: none;
     width: 100%;
     margin: 0 auto;
-    div.col-sm-3 {
+    div.col-sm-4 {
       margin-bottom: 1em;
+    }
+    a span {
+      margin-bottom: .5em;
+    }
+  }
+  span {
+    display:block;
+    &:hover {
+      font-weight: bolder;
+    }
+    i.fa {
+      border-radius: 100%;
+      padding: .32em;
+      background-color: darken($lavenderColor, 5%);
+      width: 1.6em;
+      height: 1.6em;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2em;
+      color: white;
+      opacity: .8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+section.locations {
+  width: 100%;
+  margin: 0 auto;
+  div.row {
+    text-align: center;
+    border: none;
+    width: 100%;
+    margin: 1em auto;
+    div.col-sm-6 {
+      margin-bottom: 1em;
+    }
+    a span {
+      margin-bottom: .5em;
+    }
+    .address {
+      max-width: 75%;
+      display: block;
+      margin: 0 auto;
     }
   }
   span {
@@ -284,7 +329,11 @@ section.contact {
       color: darken($lavenderColor, 30%);
     }
   }
-
+  @media (min-width: 996px) {
+    div.row .address {
+      max-width: 50%;
+    }
+  }
 }
 
 /* ------------------------------------------------------------
@@ -305,7 +354,7 @@ h1 {
   &#vision, &#description, &#contact, &#chinese, &#khanh {
     color: darken($lavenderColor, 30%);
   }
-  &#mission, &#testimonials, &#acupuncture, &#facial-rejuv {
+  &#mission, &#testimonials, &#acupuncture, &#facial-rejuv, &#locations {
     color: darken($sageColor, 30%);
   }
 }
@@ -530,7 +579,8 @@ MEDIA QUERY FOR LARGER SCREENS > 1000px
     padding-top: 1em;
   }
 
-  section.contact div.row {
+  section.contact div.row,
+  section.locations div.row {
     text-align: center;
     border: none;
       span {

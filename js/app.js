@@ -80,6 +80,12 @@
       restrict: "E",
       templateUrl: "shared/contact/contact.html"
     };
+  })
+  .directive("locations", function() {
+    return {
+      restrict: "E",
+      templateUrl: "shared/locations/locations.html"
+    };
   });
 
 
